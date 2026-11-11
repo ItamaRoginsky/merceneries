@@ -1,0 +1,77 @@
+[
+    {
+        "name": "itamar",
+        "role": "defender",
+        "hp": 999
+    },
+    {
+        "name": "naama",
+        "role": "attacker",
+        "hp": 100
+    },
+    {
+        "name": "dvir",
+        "role": "attacker",
+        "hp": 125
+    },
+    {
+        "name": "amit",
+        "role": "special",
+        "hp": 50
+    },
+    {
+        "name": "or",
+        "role": "defender",
+        "hp": 150
+    },
+    {
+        "name": "amishai",
+        "role": "defender",
+        "hp": 125
+    },
+    {
+        "name": "smuk",
+        "role": "attacker",
+        "hp": 100
+    },
+    {
+        "name": "mia",
+        "role": "defender",
+        "hp": 125
+    },
+    {
+        "name": "itay",
+        "role": "defender",
+        "hp": 200
+    },
+    {
+        "name": "ziv",
+        "role": "defender",
+        "hp": 125
+    },
+    {
+        "name": "lian",
+        "role": "attacker",
+        "hp": 125
+    },
+    {
+        "name": "harel",
+        "role": "attacker",
+        "hp": 125
+    },
+    {
+        "name": "yuval",
+        "role": "defender",
+        "hp": 100
+    },
+    {
+        "name": "dafna",
+        "role": "attacker",
+        "hp": 125
+    },
+    {
+        "name": "ariel",
+        "role": "special",
+        "hp": 125
+    }
+]
