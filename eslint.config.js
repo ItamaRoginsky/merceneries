@@ -14,6 +14,7 @@ export default defineConfig([
   ...tseslint.configs.recommended,
   {
     rules: {
+      "no-multiple-empty-lines": ["error", { max: 1 }],
       "semi": ["error", "always"],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/naming-convention": [

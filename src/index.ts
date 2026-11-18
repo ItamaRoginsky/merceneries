@@ -32,18 +32,18 @@ function makeMercenariesNiceB(merc: Mercenary[]): NiceMercenary[] {
     return merc.map((m) => Object.assign(m, { sayHello(): void { greetByName(m.name); } }));
 }
 
-function makeMercenariesNiceC(merc: Mercenary[]): NiceMercenary[] {
-    return merc.map((m) => ({ ...m, sayHello() { greetByName(this.name); } }));
+const mercenaries = getMercenaries();
+const niceMercenariesA = makeMercenariesNiceA(mercenaries);
+const niceMercenariesB = makeMercenariesNiceB(mercenaries);
+
+console.log(groupBy(mercenaries));
+console.log(groupBy(mercenaries, "hp"));
+console.log(getByRoles(mercenaries, ["attacker", "defender"]));
+
+if (niceMercenariesA[0] !== undefined) {
+    niceMercenariesA[0].sayHello();
 }
 
-
-const mercenaries = getMercenaries();
-// console.log(groupBy(mercenaries, 'role')); 
-const filtered = getByRoles(mercenaries, ["attacker", "defender"]);
-const grouped = groupBy(filtered, 'role');
-
-console.log(grouped);
-// const niceMercenaries = makeMercenariesNiceA(mercenaries);
-// if (niceMercenaries[0] !== undefined) {
-//     niceMercenaries[0].sayHello();
-// }
+if (niceMercenariesB[0] !== undefined) {
+    niceMercenariesB[0].sayHello();
+}
