@@ -16,8 +16,8 @@ function getMercenaries(): Mercenary[] {
     return mercenariesList;
 }
 
-function groupBy(mercenaries: Mercenary[], prop: keyof Mercenary = 'role') {
-    return Object.groupBy(mercenaries, x => x[prop]);
+function groupBy(mercenaries: Mercenary[], prop: keyof Mercenary = "role") {
+    return Object.groupBy(mercenaries, mercenary => mercenary[prop]);
 }
 
 function getByRoles(mercenaries: Mercenary[], roles: string[]) {
@@ -25,16 +25,21 @@ function getByRoles(mercenaries: Mercenary[], roles: string[]) {
 }
 
 function makeMercenariesNiceA(merc: Mercenary[]): NiceMercenary[] {
-    return merc.map((m) => ({ ...m, sayHello(): void { greetByName(m.name); } }));
+    return merc.map((currMercenary) => ({ ...currMercenary, sayHello(): void { greetByName(currMercenary.name); } }));
 }
 
 function makeMercenariesNiceB(merc: Mercenary[]): NiceMercenary[] {
-    return merc.map((m) => Object.assign(m, { sayHello(): void { greetByName(m.name); } }));
+    return merc.map((currMercenary) => Object.assign({}, currMercenary, { sayHello(): void { greetByName(currMercenary.name); } }));
+}
+
+function makeMercenariesNiceC(mercenaries: Mercenary[]): NiceMercenary[] {
+    return mercenaries.map(currMercenary => ({ name: currMercenary.name, role: currMercenary.role, hp: currMercenary.hp, sayHello: () => greetByName(currMercenary.name) }));
 }
 
 const mercenaries = getMercenaries();
 const niceMercenariesA = makeMercenariesNiceA(mercenaries);
 const niceMercenariesB = makeMercenariesNiceB(mercenaries);
+const niceMercenariesC = makeMercenariesNiceC(mercenaries);
 
 console.log(groupBy(mercenaries));
 console.log(groupBy(mercenaries, "hp"));
@@ -46,4 +51,8 @@ if (niceMercenariesA[0] !== undefined) {
 
 if (niceMercenariesB[0] !== undefined) {
     niceMercenariesB[0].sayHello();
+}
+
+if (niceMercenariesC[0] !== undefined) {
+    niceMercenariesC[0].sayHello();
 }
