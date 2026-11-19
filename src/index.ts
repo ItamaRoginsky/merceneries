@@ -32,6 +32,8 @@ function makeMercenariesNiceB(merc: Mercenary[]): NiceMercenary[] {
     return merc.map((currMercenary) => Object.assign({}, currMercenary, { sayHello(): void { greetByName(currMercenary.name); } }));
 }
 
+//delete this
+
 function makeMercenariesNiceC(mercenaries: Mercenary[]): NiceMercenary[] {
     return mercenaries.map(currMercenary => ({ name: currMercenary.name, role: currMercenary.role, hp: currMercenary.hp, sayHello: () => greetByName(currMercenary.name) }));
 }
