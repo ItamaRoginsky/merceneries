@@ -1,26 +1,17 @@
 {
   "name": "mercenariests",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "build": "npm run lint && npx tsc && node dist/src/index.js"
+    "build": "tsc",
+    "main": "node dist/src/index.js"
   },
-  "keywords": [],
   "type": "module",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^8.73.0",
-    "@typescript-eslint/parser": "^8.73.0",
     "eslint": "^10.15.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.7",
-    "globals": "^17.14.0",
-    "prettier": "^3.10.1",
-    "ts-node": "^10.9.2",
-    "typescript": "5.9",
+    "typescript": "^5.9.1",
     "typescript-eslint": "^8.73.0"
   }
 }
