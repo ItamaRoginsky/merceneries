@@ -10,14 +10,6 @@ console.log(groupBy(mercenaries));
 console.log(groupBy(mercenaries, "hp"));
 console.log(getByRoles(mercenaries, ["attacker", "defender"]));
 
-if (niceMercenariesA[0] !== undefined) {
-    niceMercenariesA[0].sayHello();
-}
-
-if (niceMercenariesB[0] !== undefined) {
-    niceMercenariesB[0].sayHello();
-}
-
-if (niceMercenariesC[0] !== undefined) {
-    niceMercenariesC[0].sayHello();
-}   
+niceMercenariesA[0]?.sayHello();
+niceMercenariesB[0]?.sayHello();
+niceMercenariesC[0]?.sayHello();

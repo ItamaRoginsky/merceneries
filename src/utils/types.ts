@@ -1,8 +1,11 @@
-export type Mercenary = {
-    name: string,
-    role: string,
-    hp: number
+export type Roles = "attacker" | "defender" | "special";
+
+export interface Mercenary {
+    name: string;
+    role: Roles;
+    hp: number;
 };
 
-export type NiceMercenary = Mercenary & { sayHello(): void };
-
+export interface NiceMercenary extends Mercenary {
+    sayHello(): void;
+};
